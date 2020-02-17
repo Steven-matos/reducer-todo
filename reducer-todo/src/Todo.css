@@ -4,13 +4,13 @@
 
 /* Main Content Styling */
 body{ 
-   background: #FFFFFC;
+   background: rgba(223, 223, 223, 0.356);
    text-align: center;
 }
 
 .main-content {
    text-align: center;
-   background: #D2CD9B;
+   background: #fffff2ec;
    width: 50%;
    margin: 2rem auto;
    padding: 1rem 0 4rem 0;
@@ -32,7 +32,7 @@ h2 {
 
 /* Task Styling */
 .task {
-   background: white;
+   background: #f9f1f1;
    padding: .1rem 2rem;
    font-size: 1.2rem;
    width: 30%;
@@ -72,6 +72,7 @@ input {
 }
 
 button {
+   margin: .5rem 0;
    background:    #ffffff;
    border:        1px solid #000000;
    border-radius: 5px;

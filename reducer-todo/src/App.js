@@ -17,17 +17,15 @@ function App() {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch({ type: 'ADD_TODO', payload: newTask })
+    setNewTask('')
   }
 
-  const handleClear = () => {
-    dispatch({type: 'CLEAR_COMPLETED'})
-  }
 
   return (
-    <div >
+    <div className='main-content'>
       <h1>To-do App!</h1>
       <h2>List</h2>
-      <TodoForm handleChanges={handleChanges} handleSubmit={handleSubmit} handleClear={handleClear} dispatch={dispatch}/>
+      <TodoForm handleChanges={handleChanges} handleSubmit={handleSubmit} dispatch={dispatch} newTask={newTask}/>
       <TodoList taskList={state} dispatch={dispatch}/>
     </div>
   );

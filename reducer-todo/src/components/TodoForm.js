@@ -1,11 +1,11 @@
 import React from 'react';
 
-const TodoForm = ({handleSubmit, handleChanges, handleClear, dispatch}) => {
+const TodoForm = ({handleSubmit, handleChanges, newTask, dispatch}) => {
 
     return (
         <div>
         <form onSubmit={handleSubmit}>
-            <input type='text' name='newTask' placeholder='Tasks' onChange={handleChanges}/>
+            <input type='text' name='newTask' value={newTask} placeholder='Tasks' onChange={handleChanges}/>
             <div>
                 <button type='submit'>Add Todo</button>
             </div>
