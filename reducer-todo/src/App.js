@@ -19,11 +19,15 @@ function App() {
     dispatch({ type: 'ADD_TODO', payload: newTask })
   }
 
+  const handleClear = () => {
+    dispatch({type: 'CLEAR_COMPLETED'})
+  }
+
   return (
     <div >
       <h1>To-do App!</h1>
       <h2>List</h2>
-      <TodoForm handleChanges={handleChanges} handleSubmit={handleSubmit}/>
+      <TodoForm handleChanges={handleChanges} handleSubmit={handleSubmit} handleClear={handleClear} dispatch={dispatch}/>
       <TodoList taskList={state} dispatch={dispatch}/>
     </div>
   );

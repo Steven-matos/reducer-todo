@@ -18,8 +18,8 @@ export const todoReducer = (state, action) => {
                     return todo
                 }
             }); 
-        case 'CLEAR_COMPLETE':
-            return 
+        case 'CLEAR_COMPLETED':
+            return state.filter(todo => todo.completed === false);
         default:
         return state;
     };
